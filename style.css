@@ -45,7 +45,10 @@ nav {
   width: 20px;
   height: 2px;
   background-color: var(--warna-font-kesatu);
-  margin-top: 5px;
+}
+
+.hamburger-icon > span:not(:last-child) {
+  margin-bottom: 5px;
 }
 
 .konten {
