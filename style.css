@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
 
+/* data warna  */
 :root {
   --warna-font-kesatu: #5f7161;
   --warna-bg-kesatu: #efead8;
   --warna-bg-kedua: #d0c9c0;
 }
 
+/* umum */
 * {
   margin: 0;
   padding: 0;
@@ -23,10 +25,11 @@ body {
   justify-content: baseline;
 }
 
+/* navbar */
 nav {
   position: relative;
   width: auto;
-  width: 200px;
+  width: 25%;
   height: 100vh;
   padding: 1rem;
   display: flex;
@@ -34,10 +37,12 @@ nav {
   background-color: var(--warna-bg-kedua);
 }
 
+/* humberger icon */
+
 .hamburger-icon {
   position: absolute;
-  left: 200px;
-  transform: translateX(-50px);
+  right: 0px;
+  transform: translateX(-1rem);
 }
 
 .hamburger-icon span {
@@ -45,12 +50,26 @@ nav {
   width: 20px;
   height: 2px;
   background-color: var(--warna-font-kesatu);
+  /* transition: all 0.3 ease-in-out; */
+  transition: all 0.2s ease-in-out;
 }
 
 .hamburger-icon > span:not(:last-child) {
   margin-bottom: 5px;
 }
 
+.hamburger-icon.active span:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+.hamburger-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* isi navbar */
 .konten {
   color: var(--warna-font-kesatu);
 }
@@ -69,6 +88,7 @@ nav {
   font-size: 20px;
 }
 
+/* utama */
 main {
   color: var(--warna-font-kesatu);
   padding: 1rem;
