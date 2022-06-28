@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
+
+:root {
+  --warna-font-kesatu: #5f7161;
+  --warna-bg-kesatu: #efead8;
+  --warna-bg-kedua: #d0c9c0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +15,7 @@
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
+  background-color: var(--warna-bg-kesatu);
 }
 
 .container {
@@ -17,19 +25,48 @@ body {
 
 nav {
   position: relative;
+  width: auto;
   width: 200px;
-  padding: 10px;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--warna-bg-kedua);
 }
 
 .hamburger-icon {
   position: absolute;
-  transform: translateX(100px);
+  left: 200px;
+  transform: translateX(-50px);
 }
 
 .hamburger-icon span {
   display: block;
   width: 20px;
   height: 2px;
-  background-color: black;
+  background-color: var(--warna-font-kesatu);
   margin-top: 5px;
+}
+
+.konten {
+  color: var(--warna-font-kesatu);
+}
+
+.isi {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.isi p {
+  margin-left: 10px;
+}
+
+.isi i {
+  font-size: 20px;
+}
+
+main {
+  color: var(--warna-font-kesatu);
+  padding: 1rem;
 }
