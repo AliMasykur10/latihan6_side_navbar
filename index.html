@@ -10,8 +10,8 @@
   </head>
   <body>
     <div class="container">
-      <nav>
-        <div class="hamburger-icon" onclick="navbar()">
+      <nav class="navbar">
+        <div class="hamburger-icon" onclick="navbar()" title="menu">
           <span></span>
           <span></span>
           <span></span>
@@ -19,11 +19,11 @@
 
         <div class="konten">
           <div class="isi">
-            <i class="bx bx-home-alt-2"></i>
+            <i class="bx bx-home-alt-2" title="Beranda"></i>
             <p>Beranda</p>
           </div>
           <div class="isi">
-            <i class="bx bx-compass"></i>
+            <i class="bx bx-compass" title="explore"></i>
             <p>Explore</p>
           </div>
         </div>
@@ -43,9 +43,8 @@
     </div>
 
     <script>
-      const navHamburger = document.querySelector(".hamburger-icon");
       function navbar() {
-        navHamburger.classList.toggle("active");
+        document.body.classList.toggle("active");
       }
     </script>
   </body>
