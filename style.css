@@ -41,8 +41,8 @@ nav {
 
 .hamburger-icon {
   position: absolute;
-  right: 0px;
-  transform: translateX(-1rem);
+  right: 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .hamburger-icon span {
@@ -50,7 +50,6 @@ nav {
   width: 20px;
   height: 2px;
   background-color: var(--warna-font-kesatu);
-  /* transition: all 0.3 ease-in-out; */
   transition: all 0.2s ease-in-out;
 }
 
@@ -58,15 +57,24 @@ nav {
   margin-bottom: 5px;
 }
 
+.hamburger-icon.active {
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
 .hamburger-icon.active span:nth-child(2) {
   width: 0px;
 }
+.hamburger-icon.active span:nth-child(1),
+.hamburger-icon.active span:nth-child(3) {
+  transition-delay: 0.3s;
+}
 
 .hamburger-icon.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(10px);
+  transform: translateY(7px);
 }
 .hamburger-icon.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-10px);
+  transform: translateY(-7px) rotate(90deg);
 }
 
 /* isi navbar */
